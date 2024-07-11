@@ -13,7 +13,14 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
-  <body style="color:red">
+  <body style="color:rgb(0, 0, 0)">
+    @session("message")
+    <div class="success-message">
+
+        {{session('message')}}
+    </div>
+    @endsession
+
     {{ $slot }}
   </body>
 </html>
