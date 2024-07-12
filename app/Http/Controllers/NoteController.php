@@ -46,7 +46,7 @@ class NoteController extends Controller
 
 
 
-    return to_route('note.show', $note) ->with('message','Note was create Successfully');
+    return to_route('note.show', $note) ->with('message','Note was created Successfully');
   }
 
   /**
@@ -62,6 +62,9 @@ class NoteController extends Controller
    */
   public function edit(Note $note)
   {
+
+
+    
     return view("note.edit", compact('note'));
   }
 
@@ -70,7 +73,16 @@ class NoteController extends Controller
    */
   public function update(Request $request, Note $note)
   {
-    return "update";
+
+    $data = $request->validate(
+      [
+        'note' => ['required', 'string']
+      ]
+
+    );
+    $note -> update($data);
+
+    return to_route('note.show', $note) ->with('message','Note was updated Successfully');
   }
 
   /**
@@ -78,6 +90,8 @@ class NoteController extends Controller
    */
   public function destroy(Note $note)
   {
-    return "destroy";
+   $note -> delete();
+   return to_route('note.index') ->with('message','Note was Deleted Successfully');
+
   }
 }
