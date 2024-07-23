@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
 
 
     
@@ -31,4 +31,4 @@
             {{ $notes->links() }}
         </div>
     </div>
-</x-layout>
+</x-app-layout>

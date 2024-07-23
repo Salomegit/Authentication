@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
 
     <div class="note-container single-note">
         <h1 class="text-3xl py-4">Edit your note</h1>
@@ -14,4 +14,4 @@
                 <button class="note-submit-button">Submit</button>
             </div>
         </form>
-    </div></x-layout>
+    </div></x-app-layout>

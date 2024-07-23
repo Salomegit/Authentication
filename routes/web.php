@@ -13,6 +13,7 @@ use App\Http\Controllers\NoteController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::redirect('/','/note')->name('dashboard');
 
 Route::middleware(['auth','verified'])->group(
     function(){
@@ -30,9 +31,7 @@ Route :: resource("note",NoteController :: class);
     }
 );
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
