@@ -19,9 +19,9 @@ Docker is used in this Laravel project to provide a consistent and reproducible 
 ```sh
 git clone "repository-url"
 
-```
-- cd "repository-directory"
+cd "repository-directory"
 
+```
 2. Install Laravel Sail
 
 - Laravel Sail is a lightweight command-line interface for interacting with Laravel's default Docker configuration.
@@ -29,13 +29,15 @@ git clone "repository-url"
 3. Configure Environment Variables
 
 - Copy the .env.example file to .env and update the environment variables as needed:
-
-- cp .env.example .env
-
+``` sh
+cp .env.example .env
+```
 4. Build and Start the Docker Containers
 
-- Run the following command to build and start the Docker containers: "./vendor/bin/sail up -d"
-
+- Run the following command to build and start the Docker containers:
+ ```sh
+  ./vendor/bin/sail up -d
+```
 - This will build and start the Docker containers defined in your docker-compose.yml file.
 
 5. Access the Application
@@ -50,12 +52,17 @@ git clone "repository-url"
 
 - You can run various Sail commands using the following syntax:"./vendor/bin/sail <command>"
 
-- For example, to run migrations:"./vendor/bin/sail artisan migrate"
+- For example, to run migrations:
+```sh
+  ./vendor/bin/sail artisan migrate
+```
 
 7. Stopping the Containers
 
-- To stop the Docker containers, run:"./vendor/bin/sail down"
-
+- To stop the Docker containers, run:
+```sh
+./vendor/bin/sail down"
+```
 8. Additional Notes
 
 - Ensure your Docker is running before executing the Sail commands.
