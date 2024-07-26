@@ -16,8 +16,10 @@ Docker is used in this Laravel project to provide a consistent and reproducible 
 ## Getting Started
 1. Clone the Repository
 
-- git clone "repository-url"
+```sh
+git clone "repository-url"
 
+```
 - cd "repository-directory"
 
 2. Install Laravel Sail
